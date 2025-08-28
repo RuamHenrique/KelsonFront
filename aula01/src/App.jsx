@@ -4,7 +4,7 @@ import Adicao from './components/Adicao'
 const App = () => {
   return (
     <div>
-<Adicao num1={2} num2={2} />
+<Adicao num1={2} num2={2} /> 
 
     </div>
   )
