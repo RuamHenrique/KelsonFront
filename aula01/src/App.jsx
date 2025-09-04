@@ -1,10 +1,12 @@
 import React from 'react'
-import Adicao from './components/Adicao'
+import Precisoestudar from './components/precisoestudar'
+
 
 const App = () => {
   return (
     <div>
-<Adicao num1={2} num2={2} /> 
+      
+      <Precisoestudar nomeDaTecnologia ="React" />
 
     </div>
   )
