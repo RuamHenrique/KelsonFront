@@ -1,8 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+
+
 
 const DpoLgpd = () => {
+
+
+  const [dpo, setDpo] = useState([])
+  useEffect(() => {
+    axios.get("http://localhost:3000/dpolgpd")
+    .then(response => setDpo(response.data))
+    .catch(error => console.error("Erro ao carregar a lista Dpo Lgpd: ", error))
+
+  }, [])
   return (
-    <div>Pagina Sobre o DpoLgpd</div>
+
+    
+    <div>
+      <h1>DPO Lgpd:</h1>
+      {
+        dpo.map((dpo) => (
+          <div key={dpo.id}>
+            {dpo.texto}
+
+
+          </div>
+
+        ))
+
+      }
+    </div>
   )
 }
 
